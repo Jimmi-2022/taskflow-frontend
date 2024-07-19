@@ -1,6 +1,13 @@
 import React from 'react';
 import './Sidebar.scss'
-import { FaBeer } from 'react-icons/fa';
+import { GoHome } from "react-icons/go";
+import { MdOutlineDashboardCustomize } from "react-icons/md";
+import { TbMessageSearch } from "react-icons/tb";
+import { GoProjectSymlink } from "react-icons/go";
+import { GoTasklist } from "react-icons/go";
+import { MdSchedule } from "react-icons/md";
+import { LuActivitySquare } from "react-icons/lu";
+import { RiTeamLine } from "react-icons/ri";
 
 const Sidebar = () => {
     return (
@@ -12,14 +19,14 @@ const Sidebar = () => {
                 </div>
                 <nav className="sidebar__nav">
                     <ul>
-                        <li><FaBeer /><a href="/home">Home</a></li>
-                        <li><FaBeer /><a href="/dashboard">Dashboard</a></li>
-                        <li><FaBeer /><a href="/messages">Messages</a></li>
-                        <li><FaBeer /><a href="/projects">Projects</a></li>
-                        <li><FaBeer /><a href="/tasks">My Task</a></li>
-                        <li><FaBeer /><a href="/schedule">Schedule</a></li>
-                        <li><FaBeer /><a href="/activity">Activity</a></li>
-                        <li><FaBeer /><a href="/team">My Team</a></li>
+                        <li><GoHome /><a href="/home">Home</a></li>
+                        <li><MdOutlineDashboardCustomize /><a href="/dashboard">Dashboard</a></li>
+                        <li><TbMessageSearch /><a href="/messages">Messages</a></li>
+                        <li><GoProjectSymlink /><a href="/projects">Projects</a></li>
+                        <li><GoTasklist /><a href="/tasks">My Task</a></li>
+                        <li><MdSchedule /><a href="/schedule">Schedule</a></li>
+                        <li><LuActivitySquare /><a href="/activity">Activity</a></li>
+                        <li><RiTeamLine /><a href="/team">My Team</a></li>
                     </ul>
                 </nav>
                 <div className="sidebar__projects">
