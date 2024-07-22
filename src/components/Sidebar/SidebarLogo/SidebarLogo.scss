@@ -1,16 +1,11 @@
 .sidebar__logo {
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
+  @apply flex items-center mb-5;
 
   img {
-    height: 40px;
-    margin-right: 10px;
+    @apply h-10 mr-2.5;
   }
 
   h1 {
-    font-size: 18px;
-    color: #2C85FF;
-    font-weight: bold;
+    @apply text-lg text-[#2c85ff] font-bold;
   }
 }

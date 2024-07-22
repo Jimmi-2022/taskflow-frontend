@@ -3,7 +3,7 @@ import './Sidebar.scss'
 import SidebarLogo from '../../components/Sidebar/SidebarLogo/SidebarLogo.js';
 import SidebarNav from '../../components/Sidebar/SidebarNav/SidebarNav.js';
 import SidebarProjects from '../../components/Sidebar/SidebarProjects/SidebarProjects.js';
-import SearchBar from "./SearchBar/SearchBar";
+// import SearchBar from "./SearchBar/SearchBar";
 import SidebarBottom from "./SidebarBottom/SIdebarBottom";
 
 const Sidebar = () => {
@@ -11,7 +11,7 @@ const Sidebar = () => {
         <div className="sidebar">
             <div className="sidebar__top">
                 <SidebarLogo />
-                <SearchBar />
+                {/*<SearchBar />*/}
                 <SidebarNav />
                 <SidebarProjects />
             </div>

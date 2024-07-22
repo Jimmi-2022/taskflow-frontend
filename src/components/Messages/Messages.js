@@ -1,6 +1,6 @@
 import React from 'react';
 import './Messages.scss';
-import SearchBar from '../../components/Messages/SearchBar/SearchBar';
+// import SearchBar from '../../components/Messages/SearchBar/SearchBar';
 import MessageItem from '../../components/Messages/MessageItem/MessageItem';
 import Tabs from "./Tabs/Tabs";
 
@@ -22,7 +22,7 @@ const Messages = () => {
         <div className="message-list">
             <div className="header">
                 <h2>Messages</h2>
-                <SearchBar />
+                {/*<SearchBar />*/}
             </div>
             <Tabs />
             <div className="section">

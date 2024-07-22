@@ -1,50 +1,29 @@
 .sidebar__projects {
-  margin-top: 45px;
+  @apply mt-11;
 
   .circle {
-    display: inline-block;
-    width: 18px;
-    height: 18px;
-    margin-right: 15px;
-    border-width: 1px;
-    border-style: solid;
-    border-radius: 7px;
+    @apply inline-block w-5 h-5 mr-3.5 border border-solid rounded;
   }
 
   .count {
-    margin-left: auto;
-    font-weight: 400;
-    color: #999da3;
+    @apply ml-auto text-[#999da3] font-normal;
   }
 
   h3 {
-    margin-bottom: 30px;
-    color: #617791;
-    font-size: 15px;
-    font-weight: 300;
+    @apply mb-7 text-[#617791] text-sm font-light;
   }
 
   ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+    @apply list-none p-0 m-0;
 
     li {
-      display: flex;
-      align-items: center;
-      margin-bottom: 15px;
+      @apply flex items-center mb-3.5;
 
       a {
-        text-decoration: none;
-        color: #617691;
-        font-size: 16px;
-        display: flex;
-        align-items: center;
-        width: 100%;
-        padding-right: 30px;
+        @apply no-underline text-[#617691] text-base flex items-center w-full pr-7;
 
         &:hover {
-          text-decoration: underline;
+          @apply underline;
         }
       }
     }
