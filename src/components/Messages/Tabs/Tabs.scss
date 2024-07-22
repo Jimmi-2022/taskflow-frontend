@@ -1,5 +1,5 @@
 .tabs {
-  @apply flex rounded mb-[20px] overflow-hidden bg-gray-200 rounded-[9px];
+  @apply mx-5 flex rounded mb-[20px] overflow-hidden bg-gray-200 rounded-[9px];
 
   button {
     @apply flex-1 px-[0.75rem] py-1 m-1 border-none bg-none text-base cursor-pointer

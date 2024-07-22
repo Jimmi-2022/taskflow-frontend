@@ -1,5 +1,9 @@
 .message-item {
-  @apply flex justify-between items-center py-2 border-b border-[#e0e0e0] transition-colors duration-300 hover:bg-gray-100;
+  @apply px-5 flex justify-between items-center py-2 border-b border-[#e0e0e0] transition-colors duration-300 hover:bg-gray-100;
+
+  &:last-child {
+    //@apply border-none;
+  }
 
   &.highlight {
     @apply bg-cyan-100;

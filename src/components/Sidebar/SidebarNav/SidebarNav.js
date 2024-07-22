@@ -25,9 +25,9 @@ const SidebarNav = () => (
         <ul>
             {navItems.map((item, index) => (
                 <li key={index}>
-                    {item.icon}
                     <NavLink to={item.to} className="active-link">
-                        {item.label}
+                        <span>{item.icon}</span>
+                        <span>{item.label}</span>
                     </NavLink>
                 </li>
             ))}

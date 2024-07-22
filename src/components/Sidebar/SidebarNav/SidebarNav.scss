@@ -4,33 +4,43 @@
   li {
     @apply flex items-center relative transition-all duration-300 mb-3.5;
 
-    svg {
-      @apply mr-3.5 text-[#999da3] w-6 h-6;
-    }
-
-    &:hover {
-
-      svg {
-        @apply text-[#007bff] transition duration-300 ease-in-out;
-      }
+    a {
+      @apply flex items-center relative no-underline text-base text-[#617791] transition-colors duration-300;
 
       &::before {
-        @apply w-0.5;
+        content: "";
+        @apply absolute w-0 left-[-20px] bg-[#007bff] opacity-70 h-full
+        rounded-r transition-all duration-300 ease-in-out;
       }
-    }
-
-    &::before {
-      content: "";
-      @apply absolute left-[-20px] bg-[#007bff] opacity-70 h-full w-0
-      rounded-r transition-all duration-300 ease-in-out;
-    }
-
-    a {
-      @apply no-underline text-base text-[#617791] transition-colors duration-300;
 
       &:hover {
         @apply text-[#007bff];
         transition: width 0.3s ease-in-out;
+
+        &::before {
+          @apply w-0.5;
+        }
+
+        svg {
+          @apply text-[#007bff] transition duration-300 ease-in-out;
+        }
+
+      }
+
+      svg {
+        @apply mr-3.5 text-[#999da3] w-6 h-6;
+      }
+
+      &.active {
+        @apply text-[#007bff];
+
+        svg {
+          @apply text-[#007bff] transition duration-300 ease-in-out;
+        }
+
+        &::before {
+          @apply w-0.5;
+        }
       }
     }
   }

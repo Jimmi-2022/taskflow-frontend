@@ -15,7 +15,7 @@ const Messages = () => {
         { name: 'Alex Smith', phone: '+1248-879-9849', message: 'You: Hey Smith, How Are you!', time: '11:30', count: 0, avatar: '/breadpit.png' },
         { name: 'Project Chat', message: 'Landing page revamp', time: '11:30', highlight: true, avatar: '/breadpit.png' },
         { name: 'Roberto Smith', phone: '+1248-879-9849', message: 'You: Hey Smith, How Are you!', time: '11:30', count: 0, avatar: '/breadpit.png' },
-        { name: 'Alex Jonson', phone: '+1248-879-9849', message: 'You: Hey Smith, How Are you!', time: '11:30', count: 0, avatar: '/breadpit.png', isAdd: true },
+        { name: 'Alex Jonson', phone: '+1248-879-9849', message: 'You: Hey Smith, How Are you!', time: '11:30', count: 0, avatar: '/breadpit.png'},
     ];
 
     return (
