@@ -7,6 +7,7 @@ import {LuActivitySquare} from "react-icons/lu";
 import {RiTeamLine} from "react-icons/ri";
 import {NavLink} from 'react-router-dom';
 import {IoHomeOutline} from "react-icons/io5";
+import './SidebarNav.scss';
 
 const navItems = [
     { icon: <IoHomeOutline />, label: "Home", to: "/" },

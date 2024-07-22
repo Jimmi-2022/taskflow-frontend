@@ -1,0 +1,27 @@
+.search-bar {
+  @apply flex items-center p-2.5 bg-[#f1f3f4] rounded mb-5;
+
+  input {
+    @apply border-none outline-none bg-none flex-grow text-[#888a8c] text-base;
+
+
+    ::placeholder {
+      @apply text-[#888a8c];
+      opacity: 1; /* Firefox */
+    }
+
+    :-ms-input-placeholder { /* Internet Explorer 10-11 */
+      @apply text-[#888a8c];
+    }
+
+    ::-ms-input-placeholder { /* Microsoft Edge */
+      @apply text-[#888a8c];
+    }
+  }
+}
+
+.search-icon {
+  color: #5f6368;
+  margin-right: 10px;
+  font-size: 24px;
+}

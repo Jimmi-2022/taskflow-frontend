@@ -1,4 +1,5 @@
 import React from 'react';
+import './SidebarLogo.scss';
 
 const SidebarLogo = () => (
     <div className="sidebar__logo">

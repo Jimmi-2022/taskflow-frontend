@@ -1,62 +1,36 @@
 .message-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 0;
-  border-bottom: 1px solid #e0e0e0;
-  transition: background-color 0.3s;
-
-  &:hover {
-    background-color: #f1f3f4;
-  }
+  @apply flex justify-between items-center py-2 border-b border-[#e0e0e0] transition-colors duration-300 hover:bg-gray-100;
 
   &.highlight {
-    background-color: #e0f7fa;
+    @apply bg-cyan-100;
   }
 
   .avatar {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    margin-right: 10px;
+    @apply w-10 h-10 rounded-full mr-2.5;
   }
 
   .content {
-    flex-grow: 1;
+    @apply flex-grow;
 
     .name {
-      font-size: 16px;
-      font-weight: 600;
-      color: #333;
+      @apply text-base font-semibold text-gray-800;
     }
 
+    .message,
     .phone {
-      font-size: 14px;
-      color: #666;
-    }
-
-    .message {
-      font-size: 14px;
-      color: #666;
+      @apply text-sm text-[#666];
     }
 
     .time {
-      font-size: 12px;
-      color: #999;
-      margin-top: 5px;
+      @apply text-xs text-[#999] mt-1;
     }
   }
 
   .badge {
-    background-color: #ffbc5a;
-    color: #fff;
-    padding: 2px 6px;
-    border-radius: 50%;
-    font-size: 12px;
+    @apply bg-yellow-500 text-white px-1.5 py-0.5 rounded-full text-xs;
   }
 
   .add-icon {
-    font-size: 24px;
-    color: #2196f3;
+    @apply text-2xl text-blue-500;
   }
 }

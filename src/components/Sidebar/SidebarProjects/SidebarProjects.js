@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import './SidebarProjects.scss';
 
 const projects = [
     { id: 1, name: "Dot.shm", color: "#6A5ACD", count: 4 },
