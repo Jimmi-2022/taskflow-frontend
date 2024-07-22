@@ -1,0 +1,11 @@
+.search-bar {
+  @apply flex items-center p-2.5 bg-[#f1f3f4] rounded-lg;
+
+  .search-icon {
+    @apply text-[#5f6368] mr-2.5
+  }
+
+  input {
+    @apply border-none outline-none bg-none flex-grow p-1.5 placeholder-[#5f6368];
+  }
+}

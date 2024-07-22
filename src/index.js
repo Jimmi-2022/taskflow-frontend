@@ -1,15 +1,19 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import './styles/main.scss';
+import ReactDOM from 'react-dom/client';
 import App from './App';
-import ReactQueryProvider from './react-query-client';
+import ReactQueryProvider  from './react-query-client';
+import './index.scss';
 
-ReactDOM.render(
-    <React.StrictMode>
-        <ReactQueryProvider>
-            <App />
-        </ReactQueryProvider>
-    </React.StrictMode>,
-    document.getElementById('root')
-);
-
+const rootElement = document.getElementById('root');
+if (rootElement) {
+    const root = ReactDOM.createRoot(rootElement);
+    root.render(
+        <React.StrictMode>
+            <ReactQueryProvider>
+                <App />
+            </ReactQueryProvider>
+        </React.StrictMode>
+    );
+} else {
+    console.error('Root element not found');
+}

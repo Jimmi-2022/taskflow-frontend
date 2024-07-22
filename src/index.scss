@@ -1,0 +1,24 @@
+/* src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply m-0 p-0 bg-primary;
+  @apply font-custom;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  @apply font-code;
+}
+
+//**//
+.App {
+  @apply max-w-[1920px] mx-auto p-[20px] flex;
+}
+
+.main-content {
+  @apply bg-white w-full rounded-r-[15px];
+}

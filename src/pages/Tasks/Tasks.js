@@ -1,14 +1,14 @@
 import React from 'react';
-import './Header.scss';
 
-const Header = () => {
+const Tasks = () => {
     return (
         <div>
             <div className="container">
-                <p>This is header.</p>
+                <h1>Welcome to Taskflow</h1>
+                <p>This is the tasks page.</p>
             </div>
         </div>
     );
 };
 
-export default Header;
+export default Tasks;

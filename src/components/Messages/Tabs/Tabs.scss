@@ -1,0 +1,20 @@
+.tabs {
+  @apply flex rounded mb-[20px] overflow-hidden bg-gray-200 rounded-[9px];
+
+  button {
+    @apply flex-1 px-[0.75rem] py-1 m-1 border-none bg-none text-base cursor-pointer
+    transition-colors duration-300 text-gray-600 font-medium;
+
+    &.active {
+      @apply bg-white border-none text-gray-800 font-semibold;
+    }
+
+    &:nth-child(1) {
+      @apply rounded-l-[9px] mr-0;
+    }
+
+    &:nth-child(2) {
+      @apply rounded-r-[9px] ml-0;
+    }
+  }
+}

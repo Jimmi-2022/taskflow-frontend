@@ -1,14 +1,14 @@
 import React from 'react';
-import './Header.scss';
 
-const Header = () => {
+const Team = () => {
     return (
         <div>
             <div className="container">
-                <p>This is header.</p>
+                <h1>Welcome to Taskflow</h1>
+                <p>This is the team page.</p>
             </div>
         </div>
     );
 };
 
-export default Header;
+export default Team;

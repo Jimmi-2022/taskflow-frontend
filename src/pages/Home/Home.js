@@ -1,13 +1,12 @@
 import React from 'react';
-import Header from '../../components/Header/Header';
+import Messages from "../../components/Messages/Messages";
+import './Home.scss';
 
 const Home = () => {
     return (
         <div>
-            <Header />
-            <div className="container">
-                <h1>Welcome to Taskflow</h1>
-                <p>This is the home page.</p>
+            <div className="home">
+                <Messages/>
             </div>
         </div>
     );

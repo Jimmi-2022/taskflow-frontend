@@ -1,0 +1,62 @@
+.message-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #e0e0e0;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: #f1f3f4;
+  }
+
+  &.highlight {
+    background-color: #e0f7fa;
+  }
+
+  .avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+
+  .content {
+    flex-grow: 1;
+
+    .name {
+      font-size: 16px;
+      font-weight: 600;
+      color: #333;
+    }
+
+    .phone {
+      font-size: 14px;
+      color: #666;
+    }
+
+    .message {
+      font-size: 14px;
+      color: #666;
+    }
+
+    .time {
+      font-size: 12px;
+      color: #999;
+      margin-top: 5px;
+    }
+  }
+
+  .badge {
+    background-color: #ffbc5a;
+    color: #fff;
+    padding: 2px 6px;
+    border-radius: 50%;
+    font-size: 12px;
+  }
+
+  .add-icon {
+    font-size: 24px;
+    color: #2196f3;
+  }
+}
