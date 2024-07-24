@@ -1,14 +1,14 @@
 import React from 'react';
 
-const Profile = () => {
+const ActivityPage = () => {
     return (
         <div>
             <div className="container">
                 <h1>Welcome to Taskflow</h1>
-                <p>This is the profile page.</p>
+                <p>This is the activity page.</p>
             </div>
         </div>
     );
 };
 
-export default Profile;
+export default ActivityPage;

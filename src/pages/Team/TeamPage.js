@@ -1,14 +1,14 @@
 import React from 'react';
 
-const Messages = () => {
+const TeamPage = () => {
     return (
         <div>
             <div className="container">
                 <h1>Welcome to Taskflow</h1>
-                <p>This is the messages page.</p>
+                <p>This is the team page.</p>
             </div>
         </div>
     );
 };
 
-export default Messages;
+export default TeamPage;

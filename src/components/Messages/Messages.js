@@ -1,6 +1,6 @@
 import React from 'react';
 import './Messages.scss';
-// import SearchBar from '../../components/Messages/SearchBar/SearchBar';
+// import SearchBar from '../../components/MessagesPage/SearchBar/SearchBar';
 import MessageItem from '../../components/Messages/MessageItem/MessageItem';
 import Tabs from "./Tabs/Tabs";
 import Scrollbars from 'react-custom-scrollbars';

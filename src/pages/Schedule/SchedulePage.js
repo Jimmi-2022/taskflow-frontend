@@ -1,14 +1,14 @@
 import React from 'react';
 
-const Team = () => {
+const SchedulePage = () => {
     return (
         <div>
             <div className="container">
                 <h1>Welcome to Taskflow</h1>
-                <p>This is the team page.</p>
+                <p>This is the schedule page.</p>
             </div>
         </div>
     );
 };
 
-export default Team;
+export default SchedulePage;

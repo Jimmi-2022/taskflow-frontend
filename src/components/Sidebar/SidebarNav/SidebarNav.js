@@ -17,7 +17,7 @@ const navItems = [
     { icon: <MdAddTask />, label: "My Task", to: "/tasks" },
     { icon: <MdSchedule />, label: "Schedule", to: "/schedule" },
     { icon: <LuActivitySquare />, label: "Activity", to: "/activity" },
-    { icon: <RiTeamLine />, label: "My Team", to: "/team" },
+    { icon: <RiTeamLine />, label: "My TeamPage", to: "/team" },
 ];
 
 const SidebarNav = () => (

@@ -1,7 +1,7 @@
-.home {
+.MessagesPage {
   @apply max-w-[100%] w-full h-[calc(100vh-40px)] flex;
 
-  &__section {
+  .messages__section {
     @apply w-full;
   }
 }
