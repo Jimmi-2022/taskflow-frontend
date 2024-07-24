@@ -1,8 +1,18 @@
 .message-item {
-  @apply px-5 flex justify-between items-center py-2 border-b border-[#e0e0e0] transition-colors duration-300 hover:bg-gray-100;
+  @apply flex justify-between items-center transition-colors duration-300 hover:bg-gray-100;
 
   &:last-child {
-    //@apply border-none;
+
+    .inner-border {
+      @apply px-5 mx-0 mb-8;
+    }
+  }
+
+  &:first-child {
+
+    .inner-border {
+      border-top: 1px solid #e0e0e0;
+    }
   }
 
   &.highlight {
@@ -13,28 +23,32 @@
     @apply w-10 h-10 rounded-full mr-2.5;
   }
 
-  .content {
-    @apply flex-grow;
+  .inner-border {
+    @apply mx-5 w-full flex justify-between items-center py-2 border-b border-[#e0e0e0];
 
-    .name {
-      @apply text-base font-semibold text-gray-800;
+    .content {
+      @apply flex-grow;
+
+      .name {
+        @apply text-base font-semibold text-gray-800;
+      }
+
+      .message,
+      .phone {
+        @apply text-sm text-[#666];
+      }
+
+      .time {
+        @apply text-xs text-[#999] mt-1;
+      }
     }
 
-    .message,
-    .phone {
-      @apply text-sm text-[#666];
+    .badge {
+      @apply bg-yellow-500 text-white px-1.5 py-0.5 rounded-full text-xs;
     }
 
-    .time {
-      @apply text-xs text-[#999] mt-1;
+    .add-icon {
+      @apply text-2xl text-blue-500;
     }
-  }
-
-  .badge {
-    @apply bg-yellow-500 text-white px-1.5 py-0.5 rounded-full text-xs;
-  }
-
-  .add-icon {
-    @apply text-2xl text-blue-500;
   }
 }

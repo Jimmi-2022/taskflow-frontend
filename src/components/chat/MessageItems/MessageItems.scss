@@ -1,0 +1,35 @@
+.message-items {
+  @apply flex items-start space-x-4 p-4 border-b border-gray-300;
+
+  &__avatar {
+    @apply w-10 h-10 rounded-full w-[60px] h-[60px];
+  }
+
+  &__content {
+    @apply flex-1;
+
+    &__header {
+      @apply flex items-center justify-between;
+
+      &__name {
+        @apply font-medium text-gray-800;
+      }
+
+      &__time {
+        @apply text-sm text-gray-500;
+      }
+    }
+
+    &__text {
+      @apply mt-2 text-gray-700;
+    }
+
+    &__image {
+      @apply mt-2;
+
+      img {
+        @apply rounded;
+      }
+    }
+  }
+}

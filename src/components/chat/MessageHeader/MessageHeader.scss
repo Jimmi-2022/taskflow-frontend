@@ -1,0 +1,26 @@
+.message-header {
+  @apply flex items-center justify-between p-4 bg-white shadow;
+
+  &__info {
+    @apply flex items-center;
+  }
+
+  &__avatar {
+    @apply bg-blue-500 text-white flex items-center justify-center w-10 h-10 rounded-full mr-4;
+  }
+
+  &__text {
+    &__title {
+      @apply text-xl font-bold mb-1;
+    }
+
+    &__status {
+      @apply text-sm text-gray-500;
+    }
+  }
+
+  &__actions {
+    @apply flex items-center;
+    // Добавьте стили для иконок или других элементов здесь
+  }
+}

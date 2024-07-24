@@ -1,0 +1,17 @@
+.message-input {
+  @apply flex items-center bg-white p-4 shadow-md;
+
+  &__field {
+    @apply flex-grow p-2 border border-gray-300 rounded-lg outline-none;
+    &:focus {
+      @apply border-blue-500;
+    }
+  }
+
+  &__send {
+    @apply ml-4 bg-blue-500 text-white p-2 rounded-lg;
+    &:hover {
+      @apply bg-blue-600;
+    }
+  }
+}

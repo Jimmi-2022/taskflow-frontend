@@ -1,3 +1,7 @@
 .home {
-  @apply max-w-[360px] p-0;
+  @apply max-w-[100%] w-full h-[calc(100vh-40px)] flex;
+
+  &__section {
+    @apply w-full;
+  }
 }

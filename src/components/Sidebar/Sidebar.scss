@@ -1,5 +1,5 @@
 .sidebar {
-  @apply w-[250px] bg-[#f8fafb] h-screen rounded-l-[15px] flex flex-col justify-between p-5 shadow-lg;
+  @apply w-[250px] bg-[#f8fafb] h-[calc(100vh-40px)] rounded-l-[15px] flex flex-col justify-between p-5 shadow-lg;
 
   &__top {
     @apply flex-grow;
