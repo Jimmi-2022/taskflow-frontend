@@ -17,6 +17,34 @@
 
   &.highlight {
     @apply bg-cyan-100;
+
+    .inner-border {
+      @apply bg-transparent;
+    }
+
+    &:last-child {
+      @apply bg-transparent;
+
+      .inner-border {
+        @apply bg-cyan-100;
+      }
+    }
+  }
+
+  &:hover {
+    @apply bg-cyan-100;
+
+    .inner-border {
+      @apply bg-transparent;
+    }
+
+    &:last-child {
+      @apply bg-transparent;
+
+      .inner-border {
+        @apply bg-cyan-100;
+      }
+    }
   }
 
   .avatar {

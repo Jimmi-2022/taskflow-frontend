@@ -1,20 +1,20 @@
 .message-items {
-  @apply flex items-start space-x-4 p-4;
+  @apply flex items-start space-x-4 py-4 px-6;
 
   &__avatar {
-    @apply w-10 h-10 rounded-full w-[60px] h-[60px];
+    @apply rounded-full w-[60px] h-[60px];
   }
 
   &__header {
-    @apply flex items-center justify-between w-[180px];
+    @apply flex items-center justify-end w-[180px];
+  }
 
-    &__name {
-      @apply font-medium text-gray-800;
-    }
+  &__name {
+    @apply font-bold text-gray-800 mr-2;
+  }
 
-    &__time {
-      @apply text-sm text-gray-500;
-    }
+  &__time {
+    @apply text-sm text-gray-500;
   }
 
   &__content {
@@ -22,7 +22,7 @@
   }
 
   &__text {
-    @apply mt-2 w-3/4 text-gray-700 bg-[#f8fafB] p-4 rounded-tr-lg rounded-bl-lg rounded-br-lg;
+    @apply mt-2 w-max-content max-w-[60%] text-gray-700 bg-[#f8fafB] p-4 rounded-tr-lg rounded-bl-lg rounded-br-lg;
   }
 
   &__image {
@@ -34,15 +34,18 @@
   }
 
   &.my-message {
-    flex-direction: row-reverse;
+    @apply items-end flex-row-reverse;
 
-    .message-item__avatar {
-      margin-left: 10px;
-      margin-right: 0;
+    .message-items__avatar {
+      @apply ml-4 mr-0;
     }
 
-    .message-item__content {
-      background-color: #d1e7dd;
+    .message-items__text {
+      @apply ml-auto text-right;
+    }
+
+    .message-items__header {
+      @apply ml-auto;
     }
   }
 }

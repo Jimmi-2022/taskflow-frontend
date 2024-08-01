@@ -3,6 +3,7 @@ import MessageHeader from './MessageHeader/MessageHeader';
 import MessageItems from './MessageItems/MessageItems';
 import MessageInput from './MessageInput/MessageInput';
 import './Chat.scss';
+import BadgeLine from './BadgeLine/BadgeLine';
 
 const messages = [
     {
@@ -32,8 +33,7 @@ const messages = [
         avatar: "/actor-4.png",
         name: "Alex Smith",
         time: "8:24 PM",
-        message: "",
-        image: "path/to/audio.jpg"
+        message: "Okay. I will call"
     }
 ];
 
@@ -41,6 +41,7 @@ const Chat = () => {
     return (
         <div className="chat">
             <MessageHeader />
+            <BadgeLine text="Today" />
             <div className="chat__messages">
                 {messages.map((message, index) => (
                     <MessageItems

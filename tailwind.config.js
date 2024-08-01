@@ -5,6 +5,21 @@ module.exports = {
   ],
   theme: {
     extend: {
+      width: {
+        'max-content': 'max-content',
+      },
+      fontFamily: {
+        custom: [
+          'Arial', 'sans-serif',
+          '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Oxygen',
+          'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+          'sans-serif'
+        ],
+        code: [
+          'source-code-pro', 'Menlo', 'Monaco', 'Consolas', 'Courier New',
+          'monospace'
+        ],
+      },
       colors: {
         'primary': '#0162e6',
         'secondary': '',
@@ -29,18 +44,6 @@ module.exports = {
         blue: {
           500: '#2196f3',
         },
-      },
-      fontFamily: {
-        custom: [
-          'Arial', 'sans-serif',
-          '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Oxygen',
-          'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-          'sans-serif'
-        ],
-        code: [
-          'source-code-pro', 'Menlo', 'Monaco', 'Consolas', 'Courier New',
-          'monospace'
-        ],
       },
     },
   },

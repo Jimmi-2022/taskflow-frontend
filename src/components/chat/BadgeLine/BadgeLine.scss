@@ -1,0 +1,11 @@
+.badge-line {
+  @apply flex items-center justify-center my-5 relative w-full;
+
+  .line {
+    @apply flex-grow border-none border-t border-gray-300 mx-2;
+  }
+
+  .badge {
+    @apply py-1 px-3 bg-white text-gray-800 font-semibold rounded-full shadow-sm;
+  }
+}

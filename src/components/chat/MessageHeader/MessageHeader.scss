@@ -1,5 +1,5 @@
 .message-header {
-  @apply flex items-center justify-between p-4 bg-white;
+  @apply flex items-center justify-between p-4 bg-white border-b border-[#e0e0e0];
 
   &__info {
     @apply flex items-center;
@@ -10,13 +10,14 @@
   }
 
   &__text {
-    &__title {
-      @apply text-xl font-bold mb-1;
-    }
+  }
 
-    &__status {
-      @apply text-sm text-gray-500;
-    }
+  &__title {
+    @apply text-xl font-bold mb-1;
+  }
+
+  &__status {
+    @apply text-sm text-gray-500;
   }
 
   &__actions {
