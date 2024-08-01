@@ -1,8 +1,8 @@
 .message-input {
-  @apply flex items-center bg-white p-4 shadow-md;
+  @apply flex items-center bg-[#f8fafB] p-3 mx-5 rounded-lg;
 
   &__field {
-    @apply flex-grow p-2 border border-gray-300 rounded-lg outline-none;
+    @apply flex-grow p-2 rounded-lg bg-[#f8fafB] outline-none;
     &:focus {
       @apply border-blue-500;
     }

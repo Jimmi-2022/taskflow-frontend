@@ -1,35 +1,48 @@
 .message-items {
-  @apply flex items-start space-x-4 p-4 border-b border-gray-300;
+  @apply flex items-start space-x-4 p-4;
 
   &__avatar {
     @apply w-10 h-10 rounded-full w-[60px] h-[60px];
   }
 
+  &__header {
+    @apply flex items-center justify-between w-[180px];
+
+    &__name {
+      @apply font-medium text-gray-800;
+    }
+
+    &__time {
+      @apply text-sm text-gray-500;
+    }
+  }
+
   &__content {
     @apply flex-1;
+  }
 
-    &__header {
-      @apply flex items-center justify-between;
+  &__text {
+    @apply mt-2 w-3/4 text-gray-700 bg-[#f8fafB] p-4 rounded-tr-lg rounded-bl-lg rounded-br-lg;
+  }
 
-      &__name {
-        @apply font-medium text-gray-800;
-      }
+  &__image {
+    @apply mt-2;
 
-      &__time {
-        @apply text-sm text-gray-500;
-      }
+    img {
+      @apply rounded;
+    }
+  }
+
+  &.my-message {
+    flex-direction: row-reverse;
+
+    .message-item__avatar {
+      margin-left: 10px;
+      margin-right: 0;
     }
 
-    &__text {
-      @apply mt-2 text-gray-700;
-    }
-
-    &__image {
-      @apply mt-2;
-
-      img {
-        @apply rounded;
-      }
+    .message-item__content {
+      background-color: #d1e7dd;
     }
   }
 }

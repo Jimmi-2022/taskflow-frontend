@@ -13,7 +13,7 @@ const Header = () => {
                 <span className="header__date">Aug 20, 2023</span>
                 <div className="header__profile">
                     <img
-                        src="https://via.placeholder.com/40" // Путь к вашему аватару
+                        src="/actor-2.png"
                         alt="User"
                         className="header__avatar"
                     />
