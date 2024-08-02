@@ -2,6 +2,7 @@ import React from 'react';
 import Header from "../../components/Header/Header";
 import Calendar from "../../components/Calendar/Calendar";
 import TaskList from "../../components/TaskList/TaskList";
+import './SchedulePage.scss';
 
 const SchedulePage = () => {
     return (

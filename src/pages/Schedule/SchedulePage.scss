@@ -1,11 +1,11 @@
 .SchedulePage {
   @apply max-w-[100%] w-full h-[calc(100vh-40px)] flex;
 
-  .messages__section {
+  .schedule__section {
     @apply w-full;
   }
 
-  .messages__block {
+  .schedule__block {
     @apply flex;
   }
 }

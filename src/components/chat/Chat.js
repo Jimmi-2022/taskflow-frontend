@@ -1,11 +1,11 @@
-import React from 'react';
+import React, {useState} from 'react';
 import MessageHeader from './MessageHeader/MessageHeader';
 import MessageItems from './MessageItems/MessageItems';
 import MessageInput from './MessageInput/MessageInput';
 import './Chat.scss';
 import BadgeLine from './BadgeLine/BadgeLine';
 
-const messages = [
+const initialMessages  = [
     {
         type: 'your',
         avatar: "/actor-1.png",
@@ -38,6 +38,12 @@ const messages = [
 ];
 
 const Chat = () => {
+    const [messages, setMessages] = useState(initialMessages);
+
+    const handleSendMessage = (newMessage) => {
+        setMessages([...messages, newMessage]);
+    };
+
     return (
         <div className="chat">
             <MessageHeader />
@@ -55,7 +61,7 @@ const Chat = () => {
                     />
                 ))}
             </div>
-            <MessageInput />
+            <MessageInput onSendMessage={handleSendMessage}/>
         </div>
     );
 };
