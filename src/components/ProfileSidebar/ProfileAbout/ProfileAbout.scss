@@ -1,11 +1,15 @@
-.profile-sidebar__about {
-  @apply mb-6;
-}
+.profile-sidebar {
+  @apply w-80 p-4 bg-white shadow-lg rounded-br-2xl;
 
-.profile-sidebar__section-title {
-  @apply text-gray-800 font-semibold;
-}
+  &__about {
+    @apply mb-6;
+  }
 
-.profile-sidebar__section-content {
-  @apply text-gray-600 mt-2;
+  &__section-title {
+    @apply text-gray-800 font-semibold;
+  }
+
+  &__section-content {
+    @apply text-gray-600 mt-2;
+  }
 }

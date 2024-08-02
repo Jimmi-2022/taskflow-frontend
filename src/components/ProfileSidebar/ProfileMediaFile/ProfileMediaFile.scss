@@ -1,0 +1,19 @@
+.profile-sidebar {
+  @apply w-80 p-4 bg-white shadow-lg rounded-br-2xl;
+
+  &__media-item {
+    @apply flex items-center;
+  }
+
+  &__media-icon {
+    @apply text-gray-500 text-2xl mr-3;
+  }
+
+  &__media-name {
+    @apply font-semibold;
+  }
+
+  &__media-size {
+    @apply text-sm text-gray-600;
+  }
+}

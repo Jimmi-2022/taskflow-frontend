@@ -1,0 +1,23 @@
+.profile-sidebar {
+  @apply w-80 p-4 bg-white shadow-lg rounded-br-2xl;
+
+  &__members {
+    @apply mb-6;
+  }
+
+  &__section-title--members {
+    @apply flex justify-between items-center;
+  }
+
+  &__add-button {
+    @apply text-blue-500 text-lg;
+  }
+
+  &__member-list {
+    @apply mt-4 space-y-4;
+  }
+
+  &__more-members {
+    @apply text-blue-500 cursor-pointer;
+  }
+}

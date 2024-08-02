@@ -1,0 +1,31 @@
+.profile-sidebar {
+  @apply w-80 p-4 bg-white shadow-lg rounded-br-2xl;
+
+  &__member-item {
+    @apply flex items-center justify-between;
+  }
+
+  &__member-info {
+    @apply flex items-center;
+  }
+
+  &__member-avatar {
+    @apply w-10 h-10 rounded-full mr-3;
+  }
+
+  &__member-name {
+    @apply font-semibold;
+  }
+
+  &__member-status--online {
+    @apply text-green-500 text-sm;
+  }
+
+  &__member-status--offline {
+    @apply text-red-500 text-sm;
+  }
+
+  &__member-icon {
+    @apply text-gray-400;
+  }
+}

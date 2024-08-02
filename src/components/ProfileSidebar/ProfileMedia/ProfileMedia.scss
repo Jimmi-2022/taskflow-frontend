@@ -1,0 +1,19 @@
+.profile-sidebar {
+  @apply w-80 p-4 bg-white shadow-lg rounded-br-2xl;
+
+
+  &__media {
+  }
+
+  &__section-title--media {
+    @apply flex justify-between items-center;
+  }
+
+  &__see-all-button {
+    @apply text-blue-500 text-sm;
+  }
+
+  &__media-list {
+    @apply mt-4 space-y-4;
+  }
+}
