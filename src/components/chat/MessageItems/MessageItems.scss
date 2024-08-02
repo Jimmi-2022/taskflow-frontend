@@ -22,7 +22,7 @@
   }
 
   &__text {
-    @apply mt-2 w-max-content max-w-[60%] text-gray-700 bg-[#f8fafB] p-4 rounded-tr-lg rounded-bl-lg rounded-br-lg;
+    @apply mt-2 w-max-content max-w-[60%] text-gray-700 bg-[#f8fafB] p-4 rounded-tl-none rounded-tr-2xl rounded-bl-2xl rounded-br-2xl;
   }
 
   &__image {
@@ -34,10 +34,14 @@
   }
 
   &.my-message {
-    @apply items-end flex-row-reverse;
+    @apply flex-row-reverse;
 
     .message-items__avatar {
       @apply ml-4 mr-0;
+    }
+
+    .message-items__text {
+      @apply mt-2 w-max-content max-w-[60%] text-gray-700 bg-[#f8fafB] p-4 rounded-tl-2xl rounded-tr-none rounded-bl-2xl rounded-br-2xl;
     }
 
     .message-items__text {

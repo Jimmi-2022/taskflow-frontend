@@ -1,5 +1,5 @@
 .message-input {
-  @apply flex items-center bg-[#f8fafB] p-3 mx-5 rounded-lg;
+  @apply flex items-center bg-[#f8fafB] p-3 mx-5 rounded-lg mb-[23px];
 
   &__field {
     @apply flex-grow p-2 rounded-lg bg-[#f8fafB] outline-none;

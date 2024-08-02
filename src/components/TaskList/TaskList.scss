@@ -1,0 +1,27 @@
+.task-list {
+  @apply mt-6;
+
+  h3 {
+    @apply text-lg font-semibold mb-4;
+  }
+
+  &__items {
+    @apply space-y-2;
+  }
+
+  &__item {
+    @apply flex items-center;
+
+    input {
+      @apply mr-2;
+    }
+
+    label {
+      @apply text-gray-800;
+    }
+  }
+
+  &__add-button {
+    @apply mt-4 bg-blue-500 text-white py-2 px-4 rounded;
+  }
+}

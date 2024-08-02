@@ -16,7 +16,12 @@
   }
 
   &.highlight {
-    @apply bg-cyan-100;
+    @apply bg-cyan-100 relative;
+
+    &::before {
+      @apply h-[101px] absolute left-0 top-0 bottom-0 bg-blue-500 w-0.5;
+      content: '';
+    }
 
     .inner-border {
       @apply bg-transparent;
@@ -32,7 +37,12 @@
   }
 
   &:hover {
-    @apply bg-cyan-100;
+    @apply bg-cyan-100 relative;
+
+    &::before {
+      content: '';
+      @apply h-[101px] absolute left-0 top-0 bottom-0 bg-blue-500 w-0.5;
+    }
 
     .inner-border {
       @apply bg-transparent;
@@ -52,7 +62,7 @@
   }
 
   .inner-border {
-    @apply mx-5 w-full flex justify-between items-center py-2 border-b border-[#e0e0e0];
+    @apply h-[101px] mx-5 w-full flex justify-between items-center py-2 border-b border-[#e0e0e0];
 
     .content {
       @apply flex-grow;

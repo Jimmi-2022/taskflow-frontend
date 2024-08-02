@@ -1,0 +1,15 @@
+.profile-sidebar__header {
+  @apply text-center mb-6;
+}
+
+.profile-sidebar__avatar {
+  @apply w-24 h-24 rounded-full mx-auto;
+}
+
+.profile-sidebar__name {
+  @apply mt-4 text-xl font-semibold;
+}
+
+.profile-sidebar__role {
+  @apply text-gray-600;
+}

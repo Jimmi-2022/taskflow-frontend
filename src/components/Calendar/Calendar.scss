@@ -1,0 +1,35 @@
+.calendar {
+  @apply mb-6;
+
+  &__header {
+    @apply flex justify-between items-center mb-4;
+
+    h3 {
+      @apply text-lg font-semibold;
+    }
+
+    &__nav button {
+      @apply bg-gray-200 rounded-full w-6 h-6 flex items-center justify-center;
+    }
+  }
+
+  &__days {
+    @apply grid grid-cols-7 gap-2 mb-2 text-center font-semibold;
+  }
+
+  &__dates {
+    @apply grid grid-cols-7 gap-2 text-center;
+  }
+
+  &__date {
+    @apply w-8 h-8 flex items-center justify-center;
+  }
+
+  &__events {
+    @apply mt-4;
+
+    &__event {
+      @apply text-sm mb-2;
+    }
+  }
+}
