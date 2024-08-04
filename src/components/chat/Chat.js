@@ -4,6 +4,7 @@ import MessageItems from './MessageItems/MessageItems';
 import MessageInput from './MessageInput/MessageInput';
 import './Chat.scss';
 import BadgeLine from './BadgeLine/BadgeLine';
+import Scrollbars from "react-custom-scrollbars";
 
 const initialMessages  = [
     {
@@ -45,7 +46,11 @@ const Chat = () => {
     };
 
     return (
-        <div className="chat">
+        <Scrollbars
+            className="chat"
+            style={{height: 'calc(100vh - 138px)'}}
+            renderThumbVertical={props => <div {...props} className="thumb-vertical"/>}
+        >
             <MessageHeader />
             <BadgeLine text="Today" />
             <div className="chat__messages">
@@ -62,7 +67,7 @@ const Chat = () => {
                 ))}
             </div>
             <MessageInput onSendMessage={handleSendMessage}/>
-        </div>
+        </Scrollbars>
     );
 };
 

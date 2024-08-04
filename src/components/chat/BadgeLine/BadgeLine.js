@@ -3,9 +3,9 @@ import './BadgeLine.scss';
 const BadgeLine = ({ text }) => {
     return (
         <div className="badge-line">
-            <hr className="line"/>
+            <div className="line"/>
             <span className="badge">{text}</span>
-            <hr className="line"/>
+            <div className="line"/>
         </div>
     );
 };

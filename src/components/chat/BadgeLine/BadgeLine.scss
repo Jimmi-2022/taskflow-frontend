@@ -2,7 +2,7 @@
   @apply flex items-center justify-center my-5 relative w-full;
 
   .line {
-    @apply flex-grow border-none border-t border-gray-300 mx-2;
+    @apply flex-grow border-b border-[#e0e0e0];
   }
 
   .badge {
