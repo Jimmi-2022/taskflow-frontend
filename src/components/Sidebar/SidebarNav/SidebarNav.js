@@ -1,13 +1,11 @@
-import React from 'react';
-import {MdAddTask, MdOutlineDashboardCustomize} from "react-icons/md";
-import {TbMessageSearch} from "react-icons/tb";
-import {GoProjectSymlink} from "react-icons/go";
-import {MdSchedule} from "react-icons/md";
-import {LuActivitySquare} from "react-icons/lu";
-import {RiTeamLine} from "react-icons/ri";
-import {NavLink} from 'react-router-dom';
-import {IoHomeOutline} from "react-icons/io5";
-import './SidebarNav.scss';
+import React from 'react'
+import { GoProjectSymlink } from "react-icons/go"
+import { IoHomeOutline } from "react-icons/io5"
+import { MdAddTask, MdOutlineDashboardCustomize, MdSchedule } from "react-icons/md"
+import { RiTeamLine } from "react-icons/ri"
+import { TbMessageSearch } from "react-icons/tb"
+import { NavLink } from 'react-router-dom'
+import './SidebarNav.scss'
 
 const navItems = [
     { icon: <IoHomeOutline />, label: "Home", to: "/" },
@@ -16,7 +14,7 @@ const navItems = [
     { icon: <GoProjectSymlink />, label: "Projects", to: "/projects" },
     { icon: <MdAddTask />, label: "My Task", to: "/tasks" },
     { icon: <MdSchedule />, label: "Schedule", to: "/schedule" },
-    { icon: <LuActivitySquare />, label: "Activity", to: "/activity" },
+    // { icon: <LuActivitySquare />, label: "Activity", to: "/activity" },
     { icon: <RiTeamLine />, label: "My TeamPage", to: "/team" },
 ];
 

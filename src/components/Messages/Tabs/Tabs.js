@@ -1,23 +1,19 @@
-import React, { useState } from 'react';
+import React from 'react'
 import './Tabs.scss'; // Make sure to import the SCSS file
 
-const Tabs = () => {
-    const [activeTab, setActiveTab] = useState('General');
+const Tabs = ({ activeTab, setActiveTab, tabs }) => {
 
     return (
         <div className="tabs">
+            {tabs.map((tab) => (
             <button
-                className={activeTab === 'General' ? 'active' : ''}
-                onClick={() => setActiveTab('General')}
-            >
-                General
+                key={tab.label}
+                className={`tab-button ${activeTab === tab.label ? 'active' : ''}`}
+                onClick={() => setActiveTab(tab.label)}
+        >
+                {tab.label}
             </button>
-            <button
-                className={activeTab === 'Projects' ? 'active' : ''}
-                onClick={() => setActiveTab('Projects')}
-            >
-                Projects
-            </button>
+            ))}
         </div>
     );
 };

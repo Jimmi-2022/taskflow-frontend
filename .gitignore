@@ -35,3 +35,5 @@ logs/
 *.log
 logs/**/*.log
 
+# zip
+*.zip
