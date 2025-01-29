@@ -6,7 +6,7 @@
   }
 
   &__header {
-    @apply flex items-center justify-end w-[180px];
+    @apply flex items-center justify-start w-[180px];
   }
 
   &__name {
@@ -49,7 +49,7 @@
     }
 
     .message-items__header {
-      @apply ml-auto;
+      @apply ml-auto justify-end;
     }
   }
 }

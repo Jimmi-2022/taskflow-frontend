@@ -1,5 +1,5 @@
 .message-list {
-  @apply w-full overflow-hidden max-w-[360px] py-5 bg-white border-l border-r border-[#e0e0e0];
+  @apply w-full overflow-hidden min-w-[360px] py-5 bg-white border-l border-r border-[#e0e0e0];
 
   .message-list-header {
     @apply mx-5 flex justify-between items-center mb-5;

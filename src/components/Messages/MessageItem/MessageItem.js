@@ -1,10 +1,12 @@
-import React from 'react';
-import './MessageItem.scss';
-import { FaPlus } from 'react-icons/fa';
+import React from 'react'
+import { FaPlus } from 'react-icons/fa'
+import './MessageItem.scss'
 
 const MessageItem = ({ id, name, phone, message, time, count, highlight, avatar, isAdd, selectedMessageId, setSelectedMessageId }) => {
     const handleMessageClick = () => {
-        setSelectedMessageId(id);
+        if (setSelectedMessageId) {
+            setSelectedMessageId(id);
+        }
     };
 
     return (
@@ -12,6 +14,7 @@ const MessageItem = ({ id, name, phone, message, time, count, highlight, avatar,
             key={id}
             className={`message-item ${selectedMessageId === id ? 'highlight' : ''}`}
             onClick={handleMessageClick}>
+            
             <div className="inner-border">
                 {!isAdd && <img src={avatar} alt="avatar" className="avatar" />}
                 <div className="content">

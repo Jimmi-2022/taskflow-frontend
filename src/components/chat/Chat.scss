@@ -1,7 +1,0 @@
-.chat {
-  @apply flex flex-col h-[calc(100vh-113px)] border-r border-[#e0e0e0];
-
-  &__messages {
-    @apply flex-1 overflow-y-auto bg-white;
-  }
-}

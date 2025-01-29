@@ -21,17 +21,24 @@ export const generalSections = [
 
 export const projectSections = [
 	{
-        title: 'Unread Messages',
-        data: [
-            { id: 3, name: 'Project A', message: 'Project: Update on progress', time: '10:15', count: 3, avatar: '/project-1.png' },
-        ],
-    },
-    {
-        title: 'All Messages',
-        data: [
-            { id: 4, name: 'Project B', message: 'Project: New tasks assigned', time: '14:00', count: 0, avatar: '/project-2.png' },
-        ],
-    },
+		title: 'Unread Messages',
+		data: [
+				{ id: 3, name: 'Project A', message: 'Project: Update on progress', time: '10:15', count: 3, avatar: '/project-1.png' },
+		],
+ },
+ {
+		title: 'Group Chats',
+		data: [
+				{ id: 5, name: 'Development Team', message: 'Team: Let’s finish the sprint!', time: '15:00', count: 1, avatar: '/project-3.png' },
+				{ id: 6, name: 'Marketing Group', message: 'Group: Campaign is live now!', time: '14:45', count: 0, avatar: '/project-2.png' },
+		],
+ },
+ {
+		title: 'All Messages',
+		data: [
+				{ id: 4, name: 'Project B', message: 'Project: New tasks assigned', time: '14:00', count: 0, avatar: '/project-2.png' },
+		],
+ },
 ];
 
 export const messageSections = [
