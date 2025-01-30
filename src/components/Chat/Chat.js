@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import Scrollbars from "react-custom-scrollbars"
+import Scrollbars from 'react-custom-scrollbars'
 import BadgeLine from './BadgeLine/BadgeLine'
 import './Chat.scss'
 import MessageHeader from './MessageHeader/MessageHeader'
@@ -7,23 +7,26 @@ import MessageInput from './MessageInput/MessageInput'
 import MessageItems from './MessageItems/MessageItems'
 
 const Chat = ({ selectedChat }) => {
-    // Инициализация `messages` как пустого массива
     const [messages, setMessages] = useState([]);
 
-    // Обновление `messages` при изменении `selectedChat`
+    const chatKey = selectedChat ? `chat_${selectedChat.id}` : null;
+
     useEffect(() => {
-        if (selectedChat) {
-            setMessages([
-                {
-                    type: 'your',
-                    avatar: selectedChat.avatar || '/default-avatar.png',
-                    name: selectedChat.name,
-                    time: selectedChat.time,
-                    message: selectedChat.message,
-                },
-            ]);
+        if (!chatKey) return;
+
+        try {
+            const savedMessages = localStorage.getItem(chatKey);
+            setMessages(savedMessages ? JSON.parse(savedMessages) : []);
+        } catch (error) {
+            console.error('Error loading messages:', error);
+            setMessages([]); 
         }
-    }, [selectedChat]);
+    }, [chatKey]); 
+
+    useEffect(() => {
+        if (!chatKey || messages.length === 0) return;
+        localStorage.setItem(chatKey, JSON.stringify(messages));
+    }, [messages, chatKey]); 
 
     const handleSendMessage = (newMessage) => {
         setMessages((prevMessages) => [...prevMessages, newMessage]);
