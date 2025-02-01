@@ -1,7 +1,27 @@
 .chat {
-  @apply flex-auto flex-col h-[calc(100vh-113px)] border-r border-[#e0e0e0];
+	@apply flex-auto flex-col h-[calc(100vh-113px)] border-r border-[#e0e0e0];
 
-  &__messages {
-    @apply flex-1 overflow-y-auto bg-white;
-  }
+	&__messages {
+		@apply flex-1 overflow-y-auto bg-white h-full;
+
+		.empty-container {
+			@apply h-full flex items-center justify-center;
+
+			.empty-chat {
+				@apply flex flex-col items-center justify-center text-center p-5 border-b border border-blue-500 bg-cyan-100 rounded-2xl text-white shadow-sm w-[100%] max-w-[250px] mx-auto mb-[250px];
+
+				.empty-chat__image {
+					@apply w-20 h-20 mb-2;
+				}
+
+				.empty-chat__text {
+					@apply text-sm font-bold mb-1 text-[#666];
+				}
+
+				.empty-chat__subtext {
+					@apply text-sm text-[#999];
+				}
+			}
+		}
+	}
 }
