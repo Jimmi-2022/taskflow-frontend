@@ -7,57 +7,68 @@ import MessageInput from './MessageInput/MessageInput'
 import MessageItems from './MessageItems/MessageItems'
 
 const Chat = ({ selectedChat }) => {
+	// ✅ Генерируем уникальный ключ для хранения сообщений конкретного чата
+	const chatKey = selectedChat ? `chat_${selectedChat.id}` : null
 	const [messages, setMessages] = useState([])
 
-	const chatKey = selectedChat ? `chat_${selectedChat.id}` : null
-
+	// ✅ Загружаем сообщения из localStorage при загрузке чата
 	useEffect(() => {
-		if (!chatKey) return
+		if (!chatKey) {
+			setMessages([]) // Очищаем сообщения при смене чата
+			return
+		}
+
 		try {
 			const savedMessages = localStorage.getItem(chatKey)
-			const parsedMessages = savedMessages ? JSON.parse(savedMessages) : []
-			console.log('Loaded from localStorage:', parsedMessages)
-			setMessages(parsedMessages)
+			if (savedMessages) {
+				setMessages(JSON.parse(savedMessages))
+				console.log(
+					`✅ Загружены сообщения для ${chatKey}:`,
+					JSON.parse(savedMessages)
+				)
+			} else {
+				setMessages([]) // Новый чат без сообщений
+			}
 		} catch (error) {
-			console.error('Error loading messages:', error)
-			setMessages([])
+			console.error('❌ Ошибка загрузки сообщений:', error)
+			setMessages([]) // Если произошла ошибка, сбрасываем сообщения
 		}
-	}, [chatKey])
+	}, [chatKey]) // ✅ Следим за изменением `chatKey`, а не `selectedChat`
 
+	// ✅ Сохраняем сообщения в localStorage при их изменении
 	useEffect(() => {
-		if (!chatKey || messages.length === 0) return
-		console.log('Saving messages:', messages)
+		if (!chatKey) return // Если нет ключа, не выполняем сохранение
 		localStorage.setItem(chatKey, JSON.stringify(messages))
+		console.log(`💾 Сохранены сообщения для ${chatKey}:`, messages)
 	}, [messages, chatKey])
 
-	// ✅ Функция редактирования сообщений (Теперь сохраняет в localStorage)
-	const handleEditMessage = (id, newText) => {
-		setMessages(prevMessages => {
-			const updatedMessages = prevMessages.map(msg =>
-				msg.id === id ? { ...msg, message: newText } : msg
-			)
-			console.log('Saving to localStorage:', updatedMessages)
-			localStorage.setItem(chatKey, JSON.stringify(updatedMessages)) // Сохранение после редактирования
-			return updatedMessages
-		})
-	}
-
+	// ✅ Функция для отправки новых сообщений
 	const handleSendMessage = newMessage => {
 		setMessages(prevMessages => {
 			const updatedMessages = [
 				...prevMessages,
-				{ ...newMessage, id: Date.now() }, // ✅ Присваиваем уникальный id
+				{ ...newMessage, id: Date.now() },
 			]
-			console.log('New messages:', updatedMessages)
-			localStorage.setItem(chatKey, JSON.stringify(updatedMessages))
 			return updatedMessages
 		})
 	}
 
+	// ✅ Функция для редактирования сообщений
+	const handleEditMessage = (id, newText) => {
+		setMessages(prevMessages =>
+			prevMessages.map(msg =>
+				msg.id === id ? { ...msg, message: newText } : msg
+			)
+		)
+	}
+
+	// ✅ Если чат не выбран, показываем заглушку
 	if (!selectedChat) {
 		return (
-			<div className='chat-placeholder'>
-				<p>Select a message to view the chat</p>
+			<div className='flex flex-col items-center justify-center h-full text-center p-5'>
+				<p className='text-lg font-bold text-gray-600'>
+					Select a chat to start messaging
+				</p>
 			</div>
 		)
 	}
