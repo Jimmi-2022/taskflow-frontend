@@ -22,3 +22,15 @@ code {
 .main-content {
   @apply bg-white w-full rounded-r-[15px];
 }
+
+.container {
+  @apply px-[1.25rem] py-[4.50rem];
+
+  > h1 {
+    @apply text-2xl font-semibold;
+  }
+
+  > p {
+    @apply text-base font-semibold text-gray-800 mt-2;
+  }
+}

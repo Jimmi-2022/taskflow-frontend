@@ -9,7 +9,6 @@
     }
 
     &:hover {
-
       svg {
         @apply text-[#007bff] transition duration-300 ease-in-out;
       }
@@ -33,7 +32,8 @@
     }
   }
 
-  &__help, &__logout {
+  &__help,
+  &__logout {
     @apply mb-2.5;
   }
 }

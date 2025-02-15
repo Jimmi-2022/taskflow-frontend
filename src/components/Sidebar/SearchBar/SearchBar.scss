@@ -8,11 +8,13 @@
       @apply text-[#888a8c] opacity-100;
     }
 
-    :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    :-ms-input-placeholder {
+      /* Internet Explorer 10-11 */
       @apply text-[#888a8c];
     }
 
-    ::-ms-input-placeholder { /* Microsoft Edge */
+    ::-ms-input-placeholder {
+      /* Microsoft Edge */
       @apply text-[#888a8c];
     }
   }

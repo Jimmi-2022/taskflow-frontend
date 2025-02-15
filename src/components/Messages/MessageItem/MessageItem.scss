@@ -2,14 +2,12 @@
   @apply flex justify-between items-center transition-colors duration-300 hover:bg-gray-100;
 
   &:last-child {
-
     .inner-border {
       @apply px-5 mx-0 mb-8;
     }
   }
 
   &:first-child {
-
     .inner-border {
       border-top: 1px solid #e0e0e0;
     }
@@ -20,7 +18,7 @@
 
     &::before {
       @apply h-[101px] absolute left-0 top-0 bottom-0 bg-blue-500 w-0.5;
-      content: '';
+      content: "";
     }
 
     .inner-border {
@@ -40,7 +38,7 @@
     @apply bg-cyan-100 relative;
 
     &::before {
-      content: '';
+      content: "";
       @apply h-[101px] absolute left-0 top-0 bottom-0 bg-blue-500 w-0.5;
     }
 
